@@ -1,13 +1,113 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: rgba(64, 65, 61, 0.9);
+
+  display: flex;
+  justify-content: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.app {
+  height: 100vh;
+  width: 500px;
+  background: linear-gradient(rgb(183, 219, 84), rgba(248, 230, 68, 0.384));
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.app .header {
+  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-weight: 900;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+.task-list {
+  display: flex;
+  margin-top: 5px;
+  min-height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(99, 250, 137);
+  border: 1px solid black;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.task-item {
+  display: flex;
+  width: 100%;
+}
+
+.task-list .delete {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: red;
+  cursor: pointer;
+}
+
+.no-data {
+  text-align: center;
+}
+
+.add-todo {
+  min-height: 40px;
+}
+.add-todo-button {
+  background-color: rgb(74, 175, 243);
+  min-height: 30px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  float: right;
+  box-shadow: 2px 2px rgb(85, 84, 84);
+  font-size: 16px;
+  font-weight: bold;
+}
+.add-todo-button:hover {
+  height: 32px;
+  width: 102px;
+  background-color: rgb(179, 111, 243);
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.todo-form label {
+  font-weight: bold;
+}
+.todo-form input {
+  width: 100%;
+  min-height: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.todo-form button {
+  background-color: rgb(47, 231, 255);
+  min-height: 35px;
+  margin-top: 10px;
+  font-weight: bold;
 }
