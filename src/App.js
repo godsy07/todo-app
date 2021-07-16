@@ -63,7 +63,7 @@ class App extends Component {
         <header className='header'>ToDo List App</header>
         <AddToDo
           toggleAddToDo={this.toggleAddToDo}
-          value={this.state.addTodoStatus ? "Close" : "Add ToDo"}
+          status={this.state.addTodoStatus}
         />
         {this.state.addTodoStatus ? <AddToDoForm addToDo={this.addToDo} /> : ""}
         {this.state.tasks.length > 0 ? (
