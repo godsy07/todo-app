@@ -6,12 +6,19 @@ const Todo = ({ tasks, deleteTask, completeTask }) => {
       {tasks.map((task) => (
         <div className='task-list' key={task.id}>
           <div className='task-item'>
-            <input
-              type='checkbox'
-              checked={task.isCompleted}
-              onChange={() => completeTask(task.id)}
-            />
-            <div className='item-name'>{task.name}</div>
+            <div
+              className={`${
+                task.isCompleted ? "item-completed" : "item-details"
+              }`}
+            >
+              <input
+                type='checkbox'
+                checked={task.isCompleted}
+                onChange={() => completeTask(task.id)}
+              />
+
+              {task.name}
+            </div>
           </div>
           <span className='delete' onClick={() => deleteTask(task.id)}>
             &#10006;
